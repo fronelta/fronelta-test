@@ -1,5 +1,8 @@
 table "customers" {
-  column "id"    { type = "bigint" }
+  column "id" {
+    type     = "bigint"
+    identity = "always"
+  }
   column "email" { type = "text" }
   column "created_at" {
     type    = "timestamptz"
@@ -10,7 +13,10 @@ table "customers" {
 }
 
 table "orders" {
-  column "id"          { type = "bigint" }
+  column "id" {
+    type     = "bigint"
+    identity = "always"
+  }
   column "customer_id" { type = "bigint" }
   column "total_cents" { type = "integer" }
   column "status" {
