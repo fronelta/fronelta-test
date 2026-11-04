@@ -18,7 +18,7 @@ table "orders" {
     identity = "always"
   }
   column "customer_id" { type = "bigint" }
-  column "total_cents" { type = "integer" }
+  column "total_cents" { type = "bigint" }
   column "status" {
     type    = "text"
     default = "'pending'"
